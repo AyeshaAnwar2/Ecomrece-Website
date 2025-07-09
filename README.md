@@ -12,6 +12,10 @@ Welcome to my first eCommerce web project! This is a responsive front-end eComme
 - 💬 Animated testimonials
 - ⚙️ Clean and modular code structure
 
+
+##live preview:[https://ecomrecewebsite.netlify.app]
+
+
 ## 🧑‍💻 Tech Stack
 
 - **HTML5** – Structure and semantic layout
