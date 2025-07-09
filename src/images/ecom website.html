@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://127.0.0.1:5500/index.html#BestSeller -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ecom website</title>
+    <link rel="stylesheet" href="./ecom website_files/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./ecom website_files/style.css">
+    <link href="./ecom website_files/output.css" rel="stylesheet">
+  </head>
+  <body class="font-serif">
+    <nav class="bg-amber-700 p-4 sticky top-0 z-50">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div class="bg-[url(&#39;images/foodlogo.png&#39;)] bg-contain bg-no-repeat h-8 w-20"></div>
+
+        <!-- Hamburger (shows only < sm) -->
+        <button id="menubtn" class="sm:hidden text-white text-3xl focus:outline-none">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Desktop menu (hidden < sm) -->
+        <ul id="desktop-menu" class="hidden sm:flex items-center space-x-6 text-white font-semibold">
+          <li><a href="http://127.0.0.1:5500/index.html#">Home</a></li>
+          <li><a href="http://127.0.0.1:5500/index.html#">About</a></li>
+          <li><a href="http://127.0.0.1:5500/index.html#">Contact Us</a></li>
+          <li>
+            <a id="cart-btn" href="http://127.0.0.1:5500/cart.html" class="text-amber-50 pr-3 py-1 rounded">
+              <i class="fa-solid fa-cart-plus text-base"><sup>
+                  <span id="cart-count" class="text-white rounded-full w-5 h-5">2</span>
+                </sup>
+              </i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile menu (starts hidden, toggled by JS) -->
+      <ul id="mobile-menu" class="sm:hidden hidden absolute flex-col mt-4 space-y-2 bg-white/10 p-2 border-2 border-white text-amber-700 right-0 pr-3 font-semibold">
+        <li><a href="http://127.0.0.1:5500/index.html#">Home</a></li>
+        <li><a href="http://127.0.0.1:5500/index.html#">About</a></li>
+        <li><a href="http://127.0.0.1:5500/index.html#">Contact Us</a></li>
+        <li>
+          <a href="http://127.0.0.1:5500/cart.html" id="cart-btn" class="text-amber-700 pr-3 py-1 rounded">
+            <i class="fa-solid fa-cart-plus"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ===== Hero Section ===== -->
+    <section class="flex flex-col-reverse md:flex-row items-center min-h-screen bg-amber-50">
+      <!-- === Text column === -->
+      <div class="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-16 py-10">
+        <h1 class="text-4xl sm:text-5xl md:4xl lg:text-6xl font-extrabold text-amber-700 leading-tight">
+          Organic Finger Food For 6 to 36 months old
+        </h1>
+
+        <p class="mt-6 text-lg sm:text-xl text-amber-900/80 max-w-md">
+          Order your favourite meals with a single tap and get them
+          fresh&nbsp;&amp; fast—anywhere in the city.
+        </p>
+
+        <button class="mt-8 bg-amber-700 hover:bg-amber-50 hover:text-amber-700 hover:border-amber-700 border-2 transition-all duration-300 ease-out self-start text-white px-6 py-3 rounded-4xl">
+          <a href="http://127.0.0.1:5500/index.html#BestSeller">Best Seller</a>
+        </button>
+      </div>
+
+      <!-- === Image column === -->
+      <div class="bg-[url(&#39;images/food2.png&#39;)] bg-cover flex ml-4 size-100 md:size-130"></div>
+    </section>
+    <main class="flex flex-col items-center justify-start min-h-screen py-10">
+      <!-- ── Headline & blurb ─────────────────────────────── -->
+      <header class="text-center px-4 max-w-3xl">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">
+          Meals Made for&nbsp;Your&nbsp;Little One
+        </h1>
+
+        <p class="mt-4 text-base sm:text-lg md:text-xl">
+          We’ve built <strong>Tiny</strong> with a deep understanding of what’s
+          most important when it comes to feeding your child, so it’s one less
+          thing you have to worry about.
+        </p>
+      </header>
+
+      <!-- ── Hero image + badges ──────────────────────────── -->
+      <div class="relative mt-16 flex flex-col items-center">
+        <!-- central hero -->
+        <div class="bg-[url(&#39;images/main.png&#39;)] bg-cover bg-center rounded-xl w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]"></div>
+
+        <!-- mobile badges (shown ≤ md) -->
+        <div class="flex flex-col gap-6 mt-8 w-full max-w-sm px-6 md:hidden">
+          <div class="flex flex-col items-center text-center">
+            <i class="fa-solid fa-carrot text-4xl mb-2"></i>
+            <h3 class="text-lg font-semibold">Fresh baby food, delivered</h3>
+            <p class="text-sm font-light">
+              Certified organic baby meals made to support development and
+              healthy habits.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <i class="fa-solid fa-brain text-4xl mb-2"></i>
+            <h3 class="text-lg font-semibold">Brain‑boosting nutrition</h3>
+            <p class="text-sm font-light">
+              All Tiny recipes are crafted by an expert team of neonatal
+              nutritionists.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <i class="fa-solid fa-drumstick-bite text-4xl mb-2"></i>
+            <h3 class="text-lg font-semibold">Great for baby‑led weaning</h3>
+            <p class="text-sm font-light">
+              Finger foods for babies and toddlers, nutritious meals for kids.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <i class="fa-solid fa-door-closed text-4xl mb-2"></i>
+            <h3 class="text-lg font-semibold">Quick mealtime solution</h3>
+            <p class="text-sm font-light">
+              Ready‑made, plant‑based meals with no prep required.
+            </p>
+          </div>
+        </div>
+
+        <!-- desktop badges (shown ≥ md) -->
+        <div class="hidden md:flex flex-col items-center absolute md:-top-2 md:-left-75 w-60 text-center">
+          <i class="fa-solid fa-carrot text-5xl"></i>
+          <span class="text-2xl font-bold">
+            Fresh baby food, delivered
+            <p class="text-base font-light">
+              Certified organic baby meals made to support development and
+              healthy habits.
+            </p>
+          </span>
+        </div>
+
+        <div class="hidden md:flex flex-col items-center absolute md:-top-2 md:-right-75 w-60 text-center">
+          <i class="fa-solid fa-brain text-5xl"></i>
+          <span class="text-2xl font-bold">
+            Brain‑boosting nutrition
+            <p class="text-base font-light">
+              All Tiny recipes are crafted by an expert team of neonatal
+              nutritionists.
+            </p>
+          </span>
+        </div>
+
+        <div class="hidden md:flex flex-col items-center absolute md:-bottom-1 md:-left-75 w-60 text-center">
+          <i class="fa-solid fa-drumstick-bite text-5xl"></i>
+          <span class="text-2xl font-bold">
+            Great for baby‑led weaning
+            <p class="text-base font-light">
+              Finger foods for babies and toddlers, nutritious meals for kids.
+            </p>
+          </span>
+        </div>
+
+        <div class="hidden md:flex flex-col items-center absolute md:-bottom-1 md:-right-75 w-60 text-center">
+          <i class="fa-solid fa-door-closed text-5xl"></i>
+          <span class="text-2xl font-bold">
+            Quick mealtime solution
+            <p class="text-base font-light">
+              Ready‑made, plant‑based meals with no prep required.
+            </p>
+          </span>
+        </div>
+      </div>
+
+      <!-- ── CTA button ─────────────────────────────────────── -->
+      <button class="mt-12 self-center bg-amber-700 text-white hover:bg-amber-50 px-20 py-3 rounded-4xl hover:border-amber-700 border-2 hover:text-amber-700 transition-all duration-300 ease-out">
+        SHOP NOW
+      </button>
+    </main>
+
+    <!-- Horizontal‑scrolling image gallery (Grid version) -->
+
+    <!-- ===== Horizontal Gallery Hero ==================================== -->
+    <!-- ▒▒▒ Responsive “Best Seller” carousel ▒▒▒ -->
+    <section id="BestSeller" class="relative gap-5 pl-15 pr-15 h-screen bg-amber-50 flex flex-col">
+      <h1 class="text-center text-4xl text-amber-700 text:md:text-5xl font-extrabold mt-10">
+        Best Seller
+      </h1>
+
+      <!-- ◀ PREVIOUS -->
+      <button id="prevBtn" aria-label="Previous" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white text-gray-800 shadow rounded-full p-3">
+        <i class="fa-solid fa-angle-left"></i>
+      </button>
+
+      <!-- TRACK -->
+      <div id="gallery" class="flex h-full overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory">
+        <ul class="flex mt-10 gap-15">
+          <!-- Slide 1 -->
+          <li class="item flex-none w-60 h-95 rounded-4xl snap-start bg-white/50 border-white border-2">
+            <div class="w-50 h-50 bg-[url(&#39;images/food4.png&#39;)] bg-cover bg-center"></div>
+            <h1 class="item-name text-center text-2xl md:text-3xl font-bold">
+              Coconut Curry
+            </h1>
+            <p class="text-center text-sm md:text-base">
+              Butternut Squash, Carrot, Peas, Red Lentil
+            </p>
+            <button class="add-cart-btn border-amber-700 border-2 p-2 md:p-3 hover:bg-amber-700 hover:border-white rounded-4xl flex transition-all duration-300 ease-linear ml-10 mt-3 mb-3 px-6 md:px-10 self-center">
+              Add to cart
+            </button>
+          </li>
+
+          <!-- Slide 2 -->
+          <li class="flex-none w-60 h-95 rounded-4xl snap-start bg-white/50 border-white border-2">
+            <div class="w-50 h-50 bg-[url(&#39;images/food5.png&#39;)] bg-cover bg-center"></div>
+            <h1 class="item-name text-center text-2xl md:text-3xl font-bold">
+              Apple Oatmeal
+            </h1>
+            <p class="text-center text-sm md:text-base">
+              Butternut Squash, Carrot, Peas, Red Lentil
+            </p>
+            <button class="add-cart-btn border-amber-700 border-2 p-2 md:p-3 rounded-4xl flex ml-10 mt-3 mb-3 px-6 md:px-10 self-center transition-all duration-300 ease-linear hover:bg-amber-700">
+              Add to cart
+            </button>
+          </li>
+
+          <!-- Slide 3 -->
+          <li class="flex-none w-60 h-95 rounded-4xl snap-start bg-white/50 border-white border-2">
+            <div class="w-50 h-50 bg-[url(&#39;images/food6.png&#39;)] bg-cover bg-center"></div>
+            <h1 class="item-name text-center text-2xl md:text-3xl font-bold">
+              Brocali Vagie
+            </h1>
+            <p class="text-center text-sm md:text-base">
+              Butternut Squash, Carrot, Peas, Red Lentil
+            </p>
+            <button class="add-cart-btn border-amber-700 hover:bg-amber-700 transition-all duration-300 ease-linear border-2 p-2 md:p-3 rounded-4xl flex ml-10 mt-3 mb-3 px-6 md:px-10 self-center">Remove</button>
+          </li>
+
+          <!-- Slide 4 -->
+          <li class="flex-none w-60 h-95 rounded-4xl snap-start bg-white/50 border-white border-2">
+            <div class="w-50 h-50 bg-[url(&#39;images/food7.png&#39;)] bg-cover bg-center"></div>
+            <h1 class="item-name text-center text-2xl md:text-3xl font-bold">
+              Bluebry Banana
+            </h1>
+            <p class="text-center text-sm md:text-base">
+              Butternut Squash, Carrot, Peas, Red Lentil
+            </p>
+            <button class="add-cart-btn border-amber-700 hover:bg-amber-700 transition-all duration-300 ease-linear border-2 p-2 md:p-3 rounded-4xl flex ml-10 mt-3 mb-3 px-6 md:px-10 self-center">Remove</button>
+          </li>
+
+          <!-- Slide 5 -->
+          <li class="flex-none w-60 h-95 rounded-4xl snap-start bg-white/50 border-white border-2">
+            <div class="w-50 h-50 bg-[url(&#39;images/food8.png&#39;)] bg-cover bg-center"></div>
+            <h1 class="item-name text-center text-2xl md:text-3xl font-bold">
+              Banana Butter
+            </h1>
+            <p class="text-center text-sm md:text-base">
+              Butternut Squash, Carrot, Peas, Red Lentil
+            </p>
+            <button class="add-cart-btn border-amber-700 hover:bg-amber-700 transition-all duration-300 ease-linear border-2 p-2 md:p-3 rounded-4xl flex ml-10 mt-3 mb-3 px-6 md:px-10 self-center">
+              Add to cart
+            </button>
+          </li>
+
+          <!-- Slide 6 -->
+          <li class="flex-none w-60 h-95 rounded-4xl snap-start bg-white/50 border-white border-2">
+            <div class="w-50 h-50 bg-[url(&#39;images/food4.png&#39;)] bg-cover bg-center"></div>
+            <h1 class="item-name text-center text-2xl md:text-3xl font-bold">
+              Coconut Curry
+            </h1>
+            <p class="text-center text-sm md:text-base">
+              Butternut Squash, Carrot, Peas, Red Lentil
+            </p>
+            <button class="add-cart-btn border-amber-700 hover:bg-amber-700 transition-all duration-300 ease-linear border-2 p-2 md:p-3 rounded-4xl flex ml-10 mt-3 mb-3 px-6 md:px-10 self-center">
+              Add to cart
+            </button>
+          </li>
+
+          <!-- Slide 7 -->
+          <li class="flex-none w-60 h-95 rounded-4xl snap-start bg-white/50 border-white border-2">
+            <div class="w-50 h-50 bg-[url(&#39;images/food5.png&#39;)] bg-cover bg-center"></div>
+            <h1 class="item-name text-center text-2xl md:text-3xl font-bold">
+              Apple Oatmeal
+            </h1>
+            <p class="text-center text-sm md:text-base">
+              Butternut Squash, Carrot, Peas, Red Lentil
+            </p>
+            <button class="add-cart-btn border-amber-700 hover:bg-amber-700 transition-all duration-300 ease-linear border-2 p-2 md:p-3 rounded-4xl flex ml-10 mt-3 mb-3 px-6 md:px-10 self-center">
+              Add to cart
+            </button>
+          </li>
+
+          <!-- Slide 8 -->
+          <li class="flex-none w-60 h-95 rounded-4xl snap-start bg-white/50 border-white border-2">
+            <div class="w-50 h-50 bg-[url(&#39;images/food6.png&#39;)] bg-cover bg-center"></div>
+            <h1 class="item-name text-center text-2xl md:text-3xl font-bold">
+              Brocali Vegie
+            </h1>
+            <p class="text-center text-sm md:text-base">
+              Butternut Squash, Carrot, Peas, Red Lentil
+            </p>
+            <button class="add-cart-btn border-amber-700 hover:bg-amber-700 transition-all duration-300 ease-linear border-2 p-2 md:p-3 rounded-4xl flex ml-10 mt-3 mb-3 px-6 md:px-10 self-center">
+              Add to cart
+            </button>
+          </li>
+
+          <!-- Slide 9 -->
+          <li class="flex-none w-60 h-95 rounded-4xl snap-start bg-white/50 border-white border-2">
+            <div class="w-50 h-50 bg-[url(&#39;images/food7.png&#39;)] bg-cover bg-center"></div>
+            <h1 class="item-name text-center text-2xl md:text-3xl font-bold">
+              Bluebry Banana
+            </h1>
+            <p class="text-center text-sm md:text-base">
+              Butternut Squash, Carrot, Peas, Red Lentil
+            </p>
+            <button class="add-cart-btn border-amber-700 hover:bg-amber-700 transition-all duration-300 ease-linear border-2 p-2 md:p-3 rounded-4xl flex ml-10 mt-3 mb-3 px-6 md:px-10 self-center">Remove</button>
+          </li>
+
+          <!-- Slide 10 -->
+          <li class="flex-none w-60 h-95 rounded-4xl snap-start bg-white/50 border-white border-2">
+            <div class="w-50 h-50 bg-[url(&#39;images/food8.png&#39;)] bg-cover bg-center"></div>
+            <h1 class="item-name text-center text-2xl md:text-3xl font-bold">
+              Banana Butter
+            </h1>
+            <p class="text-center text-sm md:text-base">
+              Butternut Squash, Carrot, Peas, Red Lentil
+            </p>
+            <button class="add-cart-btn border-amber-700 hover:bg-amber-700 transition-all duration-300 ease-linear border-2 p-2 md:p-3 rounded-4xl flex ml-10 mt-3 mb-3 px-6 md:px-10 self-center">
+              Add to cart
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ▶ NEXT -->
+      <button id="nextBtn" aria-label="Next" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white text-gray-800 shadow rounded-full p-3">
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+    </section>
+
+    <section class="bg-zinc-100 px-4 md:px-20 lg:px-32 py-5 text-center items-center">
+      <!-- Block 1 -->
+      <div class="flex flex-col md:flex-row items-center gap-6 mt-10 md:mt-20">
+        <!-- Image first -->
+        <div class="bg-[url(&#39;images/foods1.png&#39;)] bg-cover rounded-2xl w-full md:w-100 h-60 md:h-60"></div>
+        <!-- Text second -->
+        <div class="w-full md:w-1/2">
+          <h2 class="text-3xl font-bold mb-4">Delicious &amp; Nutritious</h2>
+          <p class="text-gray-700 text-lg">
+            Our meals are carefully crafted with fresh ingredients to ensure
+            both taste and nutrition. Answer a few quick questions about your
+            little one so we can show you their recommended meals.
+          </p>
+        </div>
+      </div>
+
+      <!-- Block 2 -->
+      <div class="sm:flex flex-col-reverse md:flex-row-reverse items-center gap-20 mt-10 md:mt-20 hidden">
+        <!-- Text first on mobile (flex-col-reverse) -->
+
+        <!-- Image second -->
+        <div class="bg-[url(&#39;images/foods2.png&#39;)] bg-cover rounded-2xl w-full md:w-100 h-60 md:h-60 pl-20"></div>
+        <div class="w-full md:w-1/2">
+          <h2 class="text-3xl font-bold mb-4">Made for Busy Lives</h2>
+          <p class="text-gray-700 text-lg">
+            Quick to prepare and easy to enjoy—perfect for your daily routine
+            without compromise.Choose which recipes you’d like for your little
+            one and pick how many you’d like to receive.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col-reverse md:flex-row-reverse items-center gap-6 mt-10 md:mt-20 md:mr-20 lg:mr-40 sm:hidden">
+        <!-- Text first on mobile (flex-col-reverse) -->
+
+        <!-- Image second -->
+
+        <div class="w-full md:w-1/2">
+          <h2 class="text-3xl font-bold mb-4">Made for Busy Lives</h2>
+          <p class="text-gray-700 text-lg">
+            Quick to prepare and easy to enjoy—perfect for your daily routine
+            without compromise.
+          </p>
+        </div>
+        <div class="bg-[url(&#39;images/foods2.png&#39;)] bg-cover rounded-2xl w-full md:w-80 h-60 md:h-60"></div>
+      </div>
+
+      <!-- Block 3 -->
+      <div class="flex flex-col md:flex-row items-center gap-6 mt-10 md:mt-20 mb-10 md:mb-20">
+        <!-- Image first -->
+        <div class="bg-[url(&#39;images/foods3.png&#39;)] bg-cover rounded-2xl w-full md:w-100 h-60 md:h-60"></div>
+        <!-- Text second -->
+        <div class="w-full md:w-1/2">
+          <h2 class="text-3xl font-bold mb-4">Loved by Kids &amp; Adults</h2>
+          <p class="text-gray-700 text-lg">
+            A variety of flavors that appeal to all ages, making mealtime a joy
+            for everyone.Choose which recipes you’d like for your little one and
+            pick how many you’d like to receive.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex text-center flex-col items-center sm:items-start sm:text-start bg-amber-50 px-4">
+      <div class="flex flex-col md:flex-row w-full max-w-6xl py-15">
+        <!-- Image first -->
+        <div class="bg-[url(&#39;images/mothers.png&#39;)] bg-contain bg-no-repeat bg-center rounded-2xl w-full h-64 md:w-1/2 md:h-80"></div>
+
+        <!-- Text second -->
+        <div class="w-full md:w-2/3 sm:mt-20">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+            Proud partner of Count on Mothers
+          </h2>
+          <p class="text-gray-700 text-base sm:text-lg">
+            Count on Mothers is a non-partisan research collective dedicated to
+            amplifying the voices of mothers, providing insights on the issues
+            that matter most to families, and ensuring policymakers in industry
+            and government prioritize the health, safety, and well-being of
+            children. We advocate for a brighter, safer future for all children.
+            Power in numbers, power in mothers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="relative bg-[url(&#39;images/your-background.jpg&#39;)] bg-cover bg-center px-4">
+      <div class="text-center my-10">
+        <h1 class="text-center text-5xl font-bold text-amber-700">
+          You're in great company
+        </h1>
+        <p class="text-center text-xl my-5 text-amber-700">
+          See what parents are saying
+        </p>
+      </div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        <!-- Slides Wrapper -->
+        <div id="testimonial-slider" class="relative overflow-hidden">
+          <div class="flex transition-transform duration-700 ease-in-out" id="slides" style="transform: translateX(0%)">
+            <!-- Slide 1 -->
+            <div class="w-full flex-shrink-0 px-4 mt-15 mb-10">
+              <div class="relative bg-amber-50 border-2 border-amber-700 rounded-2xl shadow-2xl p-10 pt-10 max-w-4xl mx-auto">
+                <div class="absolute -top-16 left-1/2 transform -translate-x-1/2">
+                  <div class="bg-[url(&#39;images/feedback.png&#39;)] w-32 h-32 rounded-full border-4 border-white bg-cover bg-center shadow-md"></div>
+                </div>
+                <p class="text-center text-xl text-gray-700 mt-12">
+                  "You've been a lifesaver for busy moms like us. I don't know
+                  what to do without Tiny Organics. I travel a lot for work and
+                  my husband gets so worried when we don't have enough of Tiny
+                  Organics in the freezer. It's made Maggie a great eater too!"
+                </p>
+                <p class="text-center mt-4 font-semibold text-gray-900">
+                  - Fatima Noor
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="w-full flex-shrink-0 px-4 mt-15">
+              <div class="relative bg-amber-50 border-2 border-amber-700 rounded-2xl shadow-2xl p-10 pt-10 max-w-4xl mx-auto">
+                <div class="absolute -top-16 left-1/2 transform -translate-x-1/2">
+                  <div class="bg-[url(&#39;images/feedback.png&#39;)] w-32 h-32 rounded-full border-4 border-white bg-cover bg-center shadow-md"></div>
+                </div>
+                <p class="text-center text-xl text-gray-700 mt-12">
+                  "A meal game changer! Every meal is fresh, organic and
+                  creative. Full disclosure, the 'I Think There I Yam' looked so
+                  tasty I had to try it lol - it's delicious!"
+                </p>
+                <p class="text-center mt-4 font-semibold text-gray-900">
+                  - Fatima Noor
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="w-full flex-shrink-0 px-4 mt-15">
+              <div class="relative bg-amber-50 border-2 border-amber-700 rounded-2xl shadow-2xl p-10 pt-10 max-w-4xl mx-auto">
+                <div class="absolute -top-16 left-1/2 transform -translate-x-1/2">
+                  <div class="bg-[url(&#39;images/feedback3.png&#39;)] w-32 h-32 rounded-full border-4 border-white bg-cover bg-center shadow-md"></div>
+                </div>
+                <p class="text-center text-xl text-gray-700 mt-12">
+                  "You understood exactly what I needed. Perfect!""A meal game
+                  changer! Every meal is fresh, organic and creative. Full
+                  disclosure, the 'I Think There I Yam' looked so tasty I had to
+                  try it lol - it's delicious!"
+                </p>
+                <p class="text-center mt-4 font-semibold text-gray-900">
+                  - Hina Malik
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="w-full flex-shrink-0 px-4 mt-15">
+              <div class="relative bg-amber-50 border-2 border-amber-700 rounded-2xl shadow-2xl p-10 pt-10 max-w-4xl mx-auto">
+                <div class="absolute -top-16 left-1/2 transform -translate-x-1/2">
+                  <div class="bg-[url(&#39;images/feedback4.png&#39;)] w-32 h-32 rounded-full border-4 border-white bg-cover bg-center shadow-md"></div>
+                </div>
+                <p class="text-center text-xl text-gray-700 mt-12">
+                  "Super professional and creative. Loved working with you!""A
+                  meal game changer! Every meal is fresh, organic and creative.
+                  Full disclosure, the 'I Think There I Yam' looked so tasty I
+                  had to try it lol - it's delicious!"
+                </p>
+                <p class="text-center mt-4 font-semibold text-gray-900">
+                  - Sana Rehman
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center mt-4 mb-4 space-x-3">
+            <button class="w-4 h-4 rounded-full bg-gray-300 hover:bg-amber-700" onclick="showSlide(0)"></button>
+            <button class="w-4 h-4 rounded-full bg-gray-300 hover:bg-amber-700" onclick="showSlide(1)"></button>
+            <button class="w-4 h-4 rounded-full bg-gray-300 hover:bg-amber-700" onclick="showSlide(2)"></button>
+            <button class="w-4 h-4 rounded-full bg-gray-300 hover:bg-amber-700" onclick="showSlide(3)"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative gap-5 pl-5 pr-5 flex flex-col">
+      <h1 class="text-center text-4xl md:text-5xl font-extrabold mt-10 text-amber-700">
+        FOLLOW US
+      </h1>
+
+      <!-- ◀ PREVIOUS -->
+      <button id="prevBtn2" aria-label="Previous" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white text-gray-800 shadow rounded-full p-3 hidden">
+        <i class="fa-solid fa-angle-left"></i>
+      </button>
+
+      <!-- TRACK -->
+      <div id="gallery2" class="flex h-full overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory">
+        <ul class="flex mt-10 gap-10 w-max">
+          <!-- Slide 1 -->
+          <li class="flex-none w-70 h-70 rounded-4xl snap-start">
+            <div class="w-70 h-70 bg-[url(&#39;images/follow1.jpg&#39;)] bg-contain bg-center"></div>
+          </li>
+
+          <!-- Slide 2 -->
+          <li class="flex-none w-70 h-70 rounded-4xl snap-start">
+            <div class="w-70 h-70 bg-[url(&#39;images/follow2.jpg&#39;)] bg-cover bg-center"></div>
+          </li>
+
+          <!-- Slide 3 -->
+          <li class="flex-none w-70 h-70 rounded-4xl snap-start">
+            <div class="w-70 h-70 bg-[url(&#39;images/follow4.jpg&#39;)] bg-cover bg-center"></div>
+          </li>
+
+          <!-- Slide 4 -->
+          <li class="flex-none w-70 h-70 rounded-4xl snap-start">
+            <div class="w-70 h-70 bg-[url(&#39;images/follow3.jpg&#39;)] bg-cover bg-center"></div>
+          </li>
+
+          <!-- Slide 5 -->
+          <li class="flex-none w-70 h-70 rounded-4xl snap-start">
+            <div class="w-70 h-70 bg-[url(&#39;images/follow5.jpg&#39;)] bg-cover bg-center"></div>
+          </li>
+
+          <!-- Slide 6 -->
+          <li class="flex-none w-70 h-70 rounded-4xl snap-start">
+            <div class="w-70 h-70 bg-[url(&#39;images/follow6.jpg&#39;)] bg-cover bg-center"></div>
+          </li>
+
+          <!-- Slide 7 -->
+          <li class="flex-none w-70 h-70 rounded-4xl snap-start">
+            <div class="w-70 h-70 bg-[url(&#39;images/follow4.jpg&#39;)] bg-cover bg-center"></div>
+          </li>
+
+          <!-- Slide 8 -->
+          <li class="flex-none w-70 h-70 rounded-4xl snap-start">
+            <div class="w-70 h-70 bg-[url(&#39;images/follow3.jpg&#39;)] bg-cover bg-center"></div>
+          </li>
+
+          <!-- Slide 9 -->
+          <li class="flex-none w-70 h-70 rounded-4xl snap-start">
+            <div class="w-70 h-70 bg-[url(&#39;images/follow2.jpg&#39;)] bg-cover bg-center"></div>
+          </li>
+
+          <!-- Slide 10 -->
+          <li class="flex-none w-70 h-70 rounded-4xl snap-start">
+            <div class="w-70 h-70 bg-[url(&#39;images/follow1.jpg&#39;)] bg-cover bg-center"></div>
+          </li>
+        </ul>
+      </div>
+
+      <button id="follow" class="border-white bg-amber-700 hover:bg-amber-50 hover:text-amber-700 hover:border-amber-700 transition-all duration-300 ease-out mt-10 mb-20 border-2 p-2 md:p-3 rounded-4xl flex ml-10 px-6 md:px-20 hover:scale-105 self-center">
+        Follow US
+      </button>
+
+      <!-- ▶ NEXT -->
+      <button id="nextBtn2" aria-label="Next" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white text-gray-800 shadow rounded-full p-3">
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+    </section>
+
+    <footer class="bg-amber-700 text-white px-6 pt-12 pb-6">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+        <div class="pl-5">
+          <div class="bg-[url(&#39;images/foodlogo.png&#39;)] bg-contain bg-no-repeat h-8 w-20"></div>
+
+          <ul class="space-y-1 text-base text-white mt-3">
+            <li><a href="http://127.0.0.1:5500/index.html">Our Meals</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html">Why Tiny</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html">Our stories</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html">FAQ</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Company</h3>
+          <ul class="space-y-1 text-base text-white">
+            <li><a href="http://127.0.0.1:5500/index.html">Ambassador program</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html">Contact us</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html">Our standards</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html">Terms of service</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html">Refund policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-3">
+            Get TINY updates, Early sucess to new meals and more
+          </h3>
+          <div class="flex flex-col sm:flex-row item-center sm:item-start gap-2">
+            <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-md bg-amber-100 border-2 border-white text-gray-800 w-full sm:w-auto sm:flex-1">
+          </div>
+          <button id="subs" class="bg-white text-black px-18 py-3 rounded-2xl mt-3 hover:bg-amber-50 border-white hover:border-white border-2 transition-all duration-300 ease-linear font-semibold">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </footer>
+    <script src="./ecom website_files/script.js.download" defer=""></script>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

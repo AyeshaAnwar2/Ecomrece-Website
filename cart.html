@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Your Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="src/output.css" rel="stylesheet" />
+  </head>
+  <body class="font-serif bg-amber-50">
+    <nav class="bg-amber-700 p-4 sticky top-0 z-50">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div
+          class="bg-[url('images/foodlogo.png')] bg-contain bg-no-repeat h-8 w-20"
+        ></div>
+
+        <!-- Hamburger (shows only < sm) -->
+        <button
+          id="menubtn"
+          class="sm:hidden text-white text-3xl focus:outline-none"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Desktop menu (hidden < sm) -->
+        <ul
+          id="desktop-menu"
+          class="hidden sm:flex items-center space-x-6 text-white font-semibold"
+        >
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li>
+            <a
+              id="cart-btn"
+              href="cart.html"
+              class="text-amber-50 pr-3 py-1 rounded"
+            >
+              <i class="fa-solid fa-cart-plus text-base"
+                ><sup>
+                  <span
+                    id="cart-count"
+                    class="text-white rounded-full w-5 h-5"
+                  ></span>
+                </sup>
+              </i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile menu (starts hidden, toggled by JS) -->
+      <ul
+        id="mobile-menu"
+        class="sm:hidden hidden absolute flex-col mt-4 space-y-2 bg-white/10 p-2 border-2 border-white text-amber-700 right-0 pr-3 font-semibold"
+      >
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li>
+          <a
+            href="cart.html"
+            id="cart-btn"
+            class="text-amber-700 pr-3 py-1 rounded"
+          >
+            <i class="fa-solid fa-cart-plus"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div
+      id="cart-container"
+      class="m-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2"
+    ></div>
+    <footer class="bg-amber-700 text-white px-6 pt-12 pb-6">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+        <div class="pl-5">
+          <div
+            class="bg-[url('images/foodlogo.png')] bg-contain bg-no-repeat h-8 w-20"
+          ></div>
+
+          <ul class="space-y-1 text-base text-white mt-3">
+            <li><a href="">Our Meals</a></li>
+            <li><a href="">Why Tiny</a></li>
+            <li><a href="">Our stories</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-3">Company</h3>
+          <ul class="space-y-1 text-base text-white">
+            <li><a href="">Ambassador program</a></li>
+            <li><a href="">Contact us</a></li>
+            <li><a href="">Our standards</a></li>
+            <li><a href="">Terms of service</a></li>
+            <li><a href="">Refund policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-3">
+            Get TINY updates, Early sucess to new meals and more
+          </h3>
+          <div
+            class="flex flex-col sm:flex-row item-center sm:item-start gap-2"
+          >
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="px-4 py-2 rounded-md bg-amber-100 border-2 border-white text-gray-800 w-full sm:w-auto sm:flex-1"
+            />
+          </div>
+          <button
+            id="subs"
+            class="bg-white text-black px-18 py-3 rounded-2xl mt-3 hover:bg-amber-50 border-white hover:border-white border-2 transition-all duration-300 ease-linear font-semibold"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </footer>
+    <script src="cart.js" defer></script>
+  </body>
+</html>
